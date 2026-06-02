@@ -1,0 +1,4 @@
+Correções aplicadas:
+- Adicionada função exportada stamp() em lib/utils.ts.
+- Adicionada função exportada normalizeChargeStatus() em lib/payments.ts.
+- Mantidas funções addDays(), makeReference(), brl(), formatDate() e demais utilitários.

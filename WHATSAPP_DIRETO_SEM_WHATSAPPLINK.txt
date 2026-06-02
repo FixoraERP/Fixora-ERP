@@ -1,0 +1,6 @@
+Correções:
+- Adicionado componente components/WhatsAppMessageActions.tsx.
+- Botão 'Enviar pelo WhatsApp' usa window.open com https://wa.me diretamente.
+- Botão 'Copiar mensagem' mantido.
+- Não há import/uso de whatsappLink no projeto.
+- Mensagem continua sendo gerada por buildWhatsAppPaymentMessage().

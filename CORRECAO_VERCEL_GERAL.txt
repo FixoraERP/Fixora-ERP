@@ -1,0 +1,8 @@
+Correções aplicadas:
+- app/dashboard/sales/page.tsx refeito com TypeScript seguro.
+- Corrigido erro: Expected 0 arguments, but got 1.
+- app/dashboard/company-charges/page.tsx refeito com TypeScript seguro.
+- buildWhatsAppPaymentMessage aceita objeto ou múltiplos argumentos.
+- Removidos usos de whatsappLink.
+- Mantido WhatsApp direto via componente.
+- Varredura de exports de utils/payments concluída.

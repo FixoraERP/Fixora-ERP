@@ -1,0 +1,7 @@
+Correções aplicadas:
+- Removido import/uso de whatsappLink do projeto.
+- Mantida apenas geração de mensagem via buildWhatsAppPaymentMessage().
+- Varredura feita em @/lib/utils e @/lib/payments.
+- Arquivos alterados na remoção: ['lib/utils.ts', 'app/dashboard/os/page.tsx', 'app/dashboard/sales/page.tsx', 'app/dashboard/messages/page.tsx', 'app/dashboard/customer-portal/page.tsx', 'app/dashboard/fiscal/page.tsx', 'app/dashboard/subscriptions/page.tsx', 'app/dashboard/commissions/page.tsx', 'app/dashboard/company-charges/page.tsx']
+- Exports faltantes em utils: []
+- Exports faltantes em payments: []

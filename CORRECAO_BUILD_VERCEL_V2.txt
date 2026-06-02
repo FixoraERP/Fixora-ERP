@@ -1,0 +1,8 @@
+Correções aplicadas:
+- Adicionada função exportada whatsappLink() em lib/utils.ts.
+- Mantida função stamp() em lib/utils.ts.
+- Mantida função normalizeChargeStatus() em lib/payments.ts.
+- Adicionada função buildWhatsAppPaymentMessage() em lib/payments.ts.
+- Varredura de imports @/lib/utils e @/lib/payments feita.
+- Exports faltantes em utils: []
+- Exports faltantes em payments: []

@@ -1,0 +1,30 @@
+FIXORA ERP - VERSÃO DEFINITIVA AUDITADA
+
+Revisado nesta versão:
+- SQL Supabase idempotente reforçado.
+- Login Master admin/admin123.
+- Branding global separado da empresa.
+- Correções comuns de Vercel build.
+- Libs essenciais garantidas.
+- Remoção de bcrypt.
+- Páginas com hooks marcadas como client.
+- Desktop/instalador EXE preservado.
+- Módulos avançados mantidos.
+
+Passos:
+1. Execute no Supabase:
+   supabase/EXECUTAR_TUDO.sql
+
+2. Configure na Vercel:
+   NEXT_PUBLIC_SUPABASE_URL
+   NEXT_PUBLIC_SUPABASE_ANON_KEY
+   SUPABASE_SERVICE_ROLE_KEY
+
+3. Faça redeploy sem cache.
+
+4. Login:
+   admin
+   admin123
+
+Observação:
+A auditoria foi estática e focada em corrigir quebras comuns de código, Supabase e Vercel. Integrações externas reais como NFC-e, WhatsApp oficial, Push Firebase e gateways precisam de credenciais e testes no ambiente real.

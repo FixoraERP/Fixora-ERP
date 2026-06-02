@@ -1,0 +1,13 @@
+Correção Vercel geral. Checks:
+{
+  "sales_page_safe": true,
+  "company_charges_safe": true,
+  "build_message_variadic": true,
+  "missing_utils_exports": true,
+  "missing_payments_exports": true,
+  "no_bad_patterns": true,
+  "whatsapp_component_exists": true,
+  "no_bcrypt": true,
+  "package_valid": true,
+  "desktop_valid": true
+}

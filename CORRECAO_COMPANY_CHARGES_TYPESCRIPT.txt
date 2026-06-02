@@ -1,0 +1,7 @@
+Correção aplicada:
+- app/dashboard/company-charges/page.tsx foi refeito com sintaxe segura.
+- buildWhatsAppPaymentMessage agora aceita objeto ou 3 argumentos.
+- Corrigido erro TypeScript: Expected 1 arguments, but got 3.
+- Removidos usos de whatsappLink.
+- Mantido envio direto por https://wa.me quando houver telefone.
+- Mantida opção de copiar mensagem.

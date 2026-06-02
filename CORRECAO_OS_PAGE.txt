@@ -1,0 +1,5 @@
+Correção aplicada:
+- app/dashboard/os/page.tsx foi refeito com sintaxe segura.
+- Removida função zap quebrada.
+- Adicionada mensagem de WhatsApp com copiar e envio direto via componente.
+- Verificado window.open quebrado.
