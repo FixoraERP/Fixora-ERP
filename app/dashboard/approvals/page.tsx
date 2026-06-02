@@ -1,0 +1,5 @@
+"use client";
+import {useEffect,useState} from "react";
+import {supabase} from "@/lib/supabase";
+import {getSession} from "@/lib/session";
+export default function ApprovalsPage(){const[s,setS]=useState<any>(null);const[rows,setRows]=useState<any[]>([]);useEffect(()=>{const ss=getSession();if(!ss){location.href="/login";return;}setS(ss);load(ss.company_id)},[]);async function load(cid=s?.company_id){const{data}=await supabase.from("approval_requests").select("*").eq("company_id",cid).order("created_at",{ascending:false});setRows(data||[])}async function decide(id:string,status:string){await supabase.from("approval_requests").update({status,approved_by:s.user_id,updated_at:new Date().toISOString()}).eq("id",id);load()}return <div className="space-y-6"><h1 className="text-3xl font-black">Aprovações do Gerente</h1><section className="card p-4">{rows.map(r=><div key={r.id} className="p-2 border-b border-zinc-800">{r.request_type} · {r.module} · {r.status}<button className="btn-primary ml-2" onClick={()=>decide(r.id,"Aprovado")}>Aprovar</button><button className="btn-danger ml-2" onClick={()=>decide(r.id,"Reprovado")}>Reprovar</button></div>)}</section></div>}

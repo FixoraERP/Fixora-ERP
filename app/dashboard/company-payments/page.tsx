@@ -1,0 +1,1 @@
+"use client";import{useEffect}from"react";export default function CompanyPaymentsRedirect(){useEffect(()=>{location.href="/dashboard/payment-settings"},[]);return <p>Redirecionando para Pagamentos / Keys...</p>}

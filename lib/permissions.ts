@@ -1,0 +1,2 @@
+import { supabase } from "@/lib/supabase";
+export async function hasPermission(company_id:string,role:string,module:string,action:"view"|"create"|"edit"|"delete"){if(role==="Administrador")return true;const column=action==="view"?"can_view":action==="create"?"can_create":action==="edit"?"can_edit":"can_delete";const{data}=await supabase.from("permissions").select(column).eq("company_id",company_id).eq("role",role).eq("module",module).single();return Boolean(data?.[column])}

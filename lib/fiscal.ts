@@ -1,0 +1,3 @@
+export function onlyDigits(value:string){return String(value||"").replace(/\D/g,"")}
+export function validateCpf(cpf:string){const c=onlyDigits(cpf);if(c.length!==11||/^([0-9])\1+$/.test(c))return false;let s=0;for(let i=0;i<9;i++)s+=parseInt(c[i])*(10-i);let d1=11-(s%11);if(d1>=10)d1=0;s=0;for(let i=0;i<10;i++)s+=parseInt(c[i])*(11-i);let d2=11-(s%11);if(d2>=10)d2=0;return d1===parseInt(c[9])&&d2===parseInt(c[10])}
+export function buildNfcePayload(data:any){return{tipo:"NFC-e",natureza_operacao:"Venda",ambiente:data.environment||"homologacao",cliente:{nome:data.customer_name||"Consumidor",cpf:onlyDigits(data.customer_cpf||"")},itens:data.items||[],total:data.total_value||0,observacoes:"NFC-e gerada pelo Fixora ERP"}}
